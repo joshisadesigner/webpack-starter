@@ -2,6 +2,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
+    devServer: {
+        contentBase: './dist',
+        open: true
+    },
     mode: 'development',
     output: {
         clean: true,
