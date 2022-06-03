@@ -1,0 +1,8 @@
+# General macOS files
+.DS_Store
+
+# General IntelliJ IDE's
+.idea
+
+# Dependency directories
+node_modules/
