@@ -16,12 +16,13 @@ module.exports = {
     mode: 'development',
     plugins: [
         new HtmlWebpackPlugin({
+            filename: "index.html",
             hash: true,
-            title: 'Webpack Starter',
+            inject: 'body',
             header: 'Webpack Starter',
             metaDesc: 'Basic webpack configuration for HTML and SASS',
-            template: './src/index.html',
-            inject: 'body',
+            template: path.resolve(__dirname, './src/index.html'),
+            title: 'Webpack Starter',
         }),
         new MiniCssExtractPlugin({
             filename: '[name].css',
