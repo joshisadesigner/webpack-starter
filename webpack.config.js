@@ -10,6 +10,9 @@ module.exports = {
         open: true
     },
     devtool: 'source-map',
+    entry: {
+        main: path.resolve(__dirname, './src/index.js'),
+    },
     mode: 'development',
     plugins: [
         new HtmlWebpackPlugin({
