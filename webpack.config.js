@@ -9,6 +9,7 @@ module.exports = {
         },
         open: true
     },
+    devtool: 'source-map',
     mode: 'development',
     plugins: [
         new HtmlWebpackPlugin({
