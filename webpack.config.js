@@ -26,11 +26,29 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(s(a|c)ss)$/,
+                test: /\.css$/,
                 use: [
-                    MiniCssExtractPlugin.loader, 
-                    'css-loader', 
-                    'sass-loader'
+                    MiniCssExtractPlugin.loader,
+                  "css-loader",
+                ]
+            },
+            {
+                test: /\.(scss)$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: "css-loader",
+                    },
+                    {
+                        loader: "sass-loader",
+                        options: {
+                            implementation: require("sass"),
+                            sourceMap: false,
+                            sassOptions: {
+                                includePaths: ['./src/styles', 'node_modules'],
+                            }
+                        }
+                    }
                 ],
             }
         ]
